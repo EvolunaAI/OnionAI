@@ -1,0 +1,111 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+migrations/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# poetry
+poetry.lock
+.poetry/
+
+# dotenv
+.env
+.env.*  
+!.env.example
+*.env
+
+# virtualenv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+### Django ###
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Django cache
+django_cache/
+cache/
+*.mo
+*.pot
+
+# Static & media files
+staticfiles/
+static/
+media/
+assets/
+
+# Django collected static files
+static_root/
+staticfiles_root/
+
+### IDE ###
+# VS Code
+.vscode/
+.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+### OS files ###
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
