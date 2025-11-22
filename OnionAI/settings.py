@@ -80,16 +80,25 @@ WSGI_APPLICATION = 'OnionAI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': database_config["DB_NAME"],
-        'HOST': database_config["DB_HOST"],
-        'PORT': database_config["DB_PORT"],
-        'USER': database_config["DB_USER"],
-        'PASSWORD': database_config["DB_PWD"]
+if database_config["DB_TYPE"] == "sqlite3":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / "db.sqlite3",
+        }
     }
-}
+
+if database_config["DB_TYPE"] == "mysql":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': database_config["DB_NAME"],
+            'HOST': database_config["DB_HOST"],
+            'PORT': database_config["DB_PORT"],
+            'USER': database_config["DB_USER"],
+            'PASSWORD': database_config["DB_PWD"]
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
